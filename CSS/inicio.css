@@ -29,7 +29,7 @@
 .hero-titulo {
     display: flex;
     align-items: center;
-
+    justify-content: center;
 }
 
 .hero-titulo h1 {
@@ -109,8 +109,9 @@
 .guia-titulo, .guia-respuesta{
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
-    gap: 5px;
+    width: fit-content;
+    margin: 5px auto;
+    gap: 15px;
 }
 
 .guia-titulo h2, .guia-respuesta h2 {
@@ -118,7 +119,6 @@
     font-style: italic;
     font-size: 30px;
 }
-
 
 .comunidad-contenido {
     padding: 10px;
