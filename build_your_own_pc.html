@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/buildpc.css">
+</head>
+<body>
+    <header>
+        <div class="barra-ventana">
+            <div class="marca">
+                <img src="img/wlogo.svg" alt="" class="wlogo" width="25px">
+                <span>PC Forgery</span>
+            </div>
+        <div class="botones-windows">
+                <button>_</button>
+                <button>□</button>
+                <button>×</button>
+            </div>
+        </div>
+        <button class="boton-menu" id="boton-menu">
+            ☰ Menú
+        </button>
+        <nav id="menu-navegacion">
+            <a href="inicio.html">Inicio</a>
+            <a href="tienda.html">Tienda</a>
+            <a href="build_your_own_pc.html">Arma tu PC</a>
+            <a href="nosotros.html">Quiénes somos</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+    <main class="armador">
+        <section class="armador-titulo">
+            <h1>Arma tu PC</h1>
+            <p>Selecciona tus componentes paso a paso</p>
+        </section>
+
+        <div class="armador-contenido">
+            <aside class="componentes">
+                <div class="componentes-titulo">
+                    <img src="img/hardware-icon.svg" alt="" class="hardware-icon">
+                    <h2>Componentes</h2>
+                </div>
+                <div class="componentes-lista">
+                    <button class="componente activo">Procesador</button>
+                    <button class="componente">Placa Madre</button>
+                    <button class="componente">Memoria RAM</button>
+                    <button class="componente">Tarjeta Gráfica</button>
+                    <button class="componente">Almacenamiento</button>
+                    <button class="componente">Fuente de Poder</button>
+                    <button class="componente">Gabinete</button></div>
+            </aside>
+            
+            <section class="selector-componentes">
+                <div class="selector-titulo">
+                    <h2>Selecciona tu Procesador</h2>
+                </div>
+                
+                <div class="fabricantes">
+                    <button class="fabricante activo">Intel</button>
+                    <button class="fabricante">AMD</button>
+                </div>
+
+                <div class="lista-productos">
+                    <div class="producto">
+            <div class="producto-info">
+                <strong>Intel Core i3-12100F</strong>
+                <p>4 núcleos / 8 hilos</p>
+            </div>
+
+            <span class="precio">$89.990</span>
+
+            <button>Seleccionar</button>
+        </div>
+
+        <div class="producto">
+            <div class="producto-info">
+                <strong>Intel Core i5-12400F</strong>
+                <p>6 núcleos / 12 hilos</p>
+            </div>
+
+            <span class="precio">$139.990</span>
+
+            <button>Seleccionar</button>
+        </div>
+
+        <div class="producto">
+            <div class="producto-info">
+                <strong>Intel Core i7-12700F</strong>
+                <p>12 núcleos / 20 hilos</p>
+            </div>
+
+            <span class="precio">$249.990</span>
+
+            <button>Seleccionar</button>
+        </div>
+                </div>
+
+            </section>
+        </div>
+
+        <section class="resumen-armado">
+            <div class="resumen-titulo">
+                <h2>Resumen del armado</h2>
+            </div>
+            <div class="resumen-contenido">
+                <div class="resumen-datos">
+                    <p>Componentes seleccionados: <strong>0 / 7</strong></p>
+                    <p>Total estimado: <strong>$0</strong></p>
+                </div>
+
+                <button class="boton-finalizar">Finalizar armado</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        Información de la empresa aquí.
+    </footer>
+    <script src="JS/nav.js"></script>
+</body>
+</html>

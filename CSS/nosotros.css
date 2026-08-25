@@ -1,0 +1,33 @@
+@import url(header.css);
+@import url(footer.css);
+@import url(styles.css);
+
+
+.nosotros, .mision, .vision {
+    width: 94%;
+    margin: 10px auto;
+    background-color: #c0c0c0;
+    border: 2px outset #ffffff;
+    max-width: 1280px;
+}
+
+.nosotros-titulo, .mision-titulo, .vision-titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+    padding: 10px;
+}
+
+.nosotros-titulo h1, .mision-titulo h1, .vision-titulo h1 {
+    font-family: "MS Shell Dlg";
+}
+
+
+.nosotros-contenido, .mision-contenido, .vision-contenido {
+    margin: 10px;
+}
+
+.contenido-ventana.oculto, .titulo.oculto {
+    display: none;
+}

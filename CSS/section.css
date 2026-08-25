@@ -1,0 +1,61 @@
+/* sections */
+section {
+    /* contenido de la sección */
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    /* vacío */
+    padding: 20px;
+    /* Colores, background y fuente */
+    box-sizing: border-box;
+    background-color: #c0c0c0;
+    border: 2px outset #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section h1 {
+    /* margen y vacío */
+    margin: 0 0 15px 0;
+    padding: 5px;
+    /* Colores, background y fuente */
+    background-color: #000080;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+}
+/* articles */
+article {
+    /* vacío */
+    padding: 10px;
+    /* colores y borde */
+    border: 2px inset #ffffff;
+    box-sizing: border-box;
+}
+
+article h2 {
+    /* margen vacio */
+    margin: -10px -10px 10px -10px;
+    padding: 5px;
+    /*Colores, background y fuente */
+    background-color: #000080;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+}
+article p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+/* productos */
+.productos h1 {
+    /* grid */
+    grid-column: 1 / -1;
+    /* margen y vacío */
+    margin: 0 0 15px 0;
+    padding: 5px;
+    /* Colores, background y fuente */
+    background-color: #000080;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+}
