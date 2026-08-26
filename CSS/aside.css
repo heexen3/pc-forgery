@@ -2,23 +2,12 @@
 aside {
     /* caja con contenido */
     width: 90%;
-    max-width: 1200px;
+    max-width: 250px;
     margin: 20px auto;
-    padding: 15px;
     box-sizing: border-box;
     /*colores, borde y fuente */
     background-color: #c0c0c0;
     border: 2px outset #ffffff;
     font-family: Tahoma, Arial, sans-serif;
     font-size: 14px;
-}
-
-aside h2 {
-    /* margen y vacío */
-    margin: -15px -15px 15px -15px;
-    padding: 5px;
-    /* colores y fuente */
-    background-color: #000080;
-    color: #ffffff;
-    font-size: 15px;
 }

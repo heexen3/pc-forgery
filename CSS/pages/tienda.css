@@ -1,0 +1,72 @@
+@import url(../header.css);
+@import url(../section.css);
+@import url(../footer.css);
+@import url(../aside.css);
+@import url(../styles.css);
+
+/* Mobile */
+
+.tienda {
+    /* espacio del contenido de la caja */
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    /* display y cuantas columnas por fila */
+    
+    
+}
+.contenedor-bienvenida {
+    width: 100%;
+    background-color: #c0c0c0;
+    border: 2px outset #ffffff;
+    padding: 10px;
+}
+.productos-contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.bienvenida-tienda {
+    display: flex;
+    align-items: center;
+}
+
+.productos-titulo {
+    height: 33px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    
+    padding: 0 5px;
+    background: linear-gradient(
+        to right,
+        #000080,
+        #537d99
+    );
+    margin-bottom: 4px;
+}
+
+.productos-titulo h2 {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: normal;
+}
+
+.productos-titulo img {
+    width: 22px;
+    height: 22px;
+    margin-right: 8px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .productos-contenedor {
+        flex-direction: row;
+        align-items: flex-start;
+        max-width: 80%;
+    }
+    .categorias-contenedor {
+        max-width: 250px;
+        
+    }
+}

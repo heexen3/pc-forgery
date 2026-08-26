@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda</title>
-    <link rel="stylesheet" href="CSS/tienda.css">
+    <link rel="stylesheet" href="CSS/pages/tienda.css">
 </head>
 <body>
     <header>
@@ -32,17 +32,34 @@
         </nav>
     </header>
     
-    <main>
-        <section>
-            Bienvenido a nuestra tienda PC Forgery.
-        </section>
-    <div class="contenido-tienda">
+    <main class="tienda">
+        <div class="contenedor-bienvenida">
+            <h1>Bienvenido a nuestra tienda PC Forgery.</h1>
+            <span>Aquí podras ver toda nuestra tienda</span>
+        </div>
+    
+    
+    <div class="productos-contenedor">
+        
+        <aside class="categorias-contenedor">
+            <div class="productos-titulo">
+                <img src="img/category-icon.svg" alt="" class="category-icon">
+                <h2>Categorías</h2>
+            </div>
+            <p>Procesadores</p>
+            <p>Tarjetas gráficas</p>
+            <p>Memoria RAM</p>
+            <p>Almacenamiento</p>
+        </aside>
     <section class="productos">
-        <h1>Productos destacados</h1>
+        <div class="productos-titulo">
+            <img src="img/shopping-bag.svg" alt="" class="shopping-bag">
+            <h2>Productos</h2>
+        </div>
         <article>
-            <h2>
-                Producto 1
-            </h2>
+            <div class="productos-titulo">
+                <span>Producto 1</span>
+            </div>
             <p>
                 Precio: $0.00
             </p>
@@ -51,9 +68,9 @@
             </button>
         </article>
         <article>
-            <h2>
-                Producto 2
-            </h2>
+            <div class="productos-titulo">
+                <span>Producto 2</span>
+            </div>
             <p>
                 Precio: $0.00
             </p>
@@ -62,9 +79,9 @@
             </button>
         </article>
         <article>
-            <h2>
-                Producto 3
-            </h2>
+            <div class="productos-titulo">
+                <span>Producto 3</span>
+            </div>
             <p>
                 Precio: $0.00
             </p>
@@ -73,9 +90,9 @@
             </button>
         </article>
         <article>
-            <h2>
-                Producto 4
-            </h2>
+            <div class="productos-titulo">
+                <span>Producto 4</span>
+            </div>
             <p>
                 Precio: $0.00
             </p>
@@ -84,14 +101,6 @@
             </button>
         </article>
     </section>
-    
-    <aside>
-        <h2>Categorías</h2>
-        <p>Procesadores</p>
-        <p>Tarjetas gráficas</p>
-        <p>Memoria RAM</p>
-        <p>Almacenamiento</p>
-    </aside>
     </div>
     </main>
     <footer>

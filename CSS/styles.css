@@ -22,3 +22,14 @@ button {
 
     cursor: pointer;
 }
+
+button:active {
+    /* Borde */
+    border: 2px inset #ffffff;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    font-family: "MS Shell Dlg";
+}
