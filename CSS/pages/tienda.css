@@ -23,7 +23,7 @@
 }
 .productos-contenedor {
     display: flex;
-    flex-direction: column;
+    
     gap: 15px;
 }
 .bienvenida-tienda {
@@ -58,15 +58,19 @@
     margin-right: 8px;
 }
 
+.categorias-contenedor {
+    max-width: 90%;
+}
 /* Tablet */
 @media (min-width: 768px) {
     .productos-contenedor {
         flex-direction: row;
         align-items: flex-start;
-        max-width: 80%;
+        max-width: 100%;
     }
     .categorias-contenedor {
         max-width: 250px;
-        
+        max-height: 300px;
+        flex-shrink: 1;
     }
 }
