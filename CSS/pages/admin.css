@@ -1,0 +1,41 @@
+@import url(../styles.css);
+@import url(../header.css);
+@import url(../footer.css);
+
+.contenido {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.contenido {
+    background-color: #c0c0c0;
+    border: 2px outset #ffffff;
+
+    margin-bottom: 15px;
+}
+
+.admin-titulo h2 {
+    font-family: "MS Shell Dlg";
+    font-style: normal;
+    color: #ffffff;
+}
+
+.admin-titulo {
+    height: 33px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    
+    padding: 0 5px;
+    background: linear-gradient(
+        to right,
+        #000080,
+        #537d99
+    );
+    margin-bottom: 4px;
+}
+
+.contenido-botones {
+    padding: 5px;
+}

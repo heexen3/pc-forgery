@@ -28,11 +28,18 @@ function validacionRegistro() {
 
     const listaUsuarios = JSON.parse(localStorage.getItem("usuarios")) || []
 
-    alert(JSON.stringify(usuarios))
     listaUsuarios.push(usuarios)
 
-    localStorage.setItem("usuarios", JSON.stringify(usuarios))
+    localStorage.setItem("usuarios", JSON.stringify(listaUsuarios))
     alert("¡Usuario registrado con éxito!");
-    return true
+    return false;
 }
-    
+
+// localStorage.setItem("usuarios", JSON.stringify([
+//     {
+//         usuario: "admin",
+//         email: "admin@pcforgery.cl",
+//         password: "admin123",
+//         rol: "admin"
+//     }
+// ]));
