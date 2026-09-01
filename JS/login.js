@@ -47,4 +47,10 @@ console.log("Usuario guardado en memoria:", JSON.parse(localStorage.getItem('usu
 validacionLogin(datosintento);
 });
 
+localStorage.setItem("usuarios",JSON.stringify([{
+    usuario:"admin",
+    email:"admin@admin.com",
+    password:"admin123",
+    rol:"admin"
+}]));
 
