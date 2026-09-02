@@ -1,0 +1,90 @@
+@import url(../styles.css);
+@import url(../header.css);
+@import url(../footer.css);
+/* Mobile */
+.producto-contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+.producto, .producto-reseña {
+    width: 100%;
+    background-color: #c0c0c0;
+    border: 2px outset #ffffff;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.producto-reseña {
+    margin-top: 20px;
+}
+
+.titulo-producto, .titulo-reseña {
+    height: 33px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    
+    padding: 0 5px;
+    background: linear-gradient(
+        to right,
+        #000080,
+        #537d99
+    );
+    margin-bottom: 4px;
+}
+
+.titulo-producto h1, .titulo-reseña h2 {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: normal;
+}
+.titulo-reseña h2 {
+    font-size: 20px;
+    font-family: "MS Shell Dlg";
+}
+.producto-imagen {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    border: 2px inset #ffffff;
+}
+.producto-detalles{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+.producto-imagen img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.reseña {
+    border: 2px inset #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+.reseña-usuario {
+    height: 33px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
+    padding: 0 5px;
+    background: linear-gradient(
+        to right,
+        #000080,
+        #537d99
+    );
+    margin-bottom: 4px;
+}
+.producto-reseña p {
+    padding: 10px;
+}

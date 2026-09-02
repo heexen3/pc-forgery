@@ -12,6 +12,7 @@ header {
     height: 33px;
     display: flex;
     align-items: center;
+    
     justify-content: space-between;
     /* espacio */
     padding: 0 5px;
