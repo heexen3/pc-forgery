@@ -11,9 +11,6 @@
     width: 90%;
     max-width: 1200px;
     margin: 20px auto;
-    /* display y cuantas columnas por fila */
-    
-    
 }
 .contenedor-bienvenida {
     width: 100%;
@@ -23,7 +20,6 @@
 }
 .productos-contenedor {
     display: flex;
-    
     gap: 15px;
 }
 .bienvenida-tienda {
@@ -59,18 +55,66 @@
 }
 
 .categorias-contenedor {
-    max-width: 90%;
+    /* caja con contenido */
+    width: 90%;
+    margin: 20px auto;
+    box-sizing: border-box;
+    /*colores, borde y fuente */
+    background-color: #c0c0c0;
+    border: 2px outset #ffffff;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 14px;
+}
+.categorias-botones {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.productos-botones {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+}
+
+.productos-botones button {
+    width: 150px;
+}
+
+article p {
+    font-size: 14px;
+    margin: 5px 0;
+    align-items: center;
 }
 /* Tablet */
 @media (min-width: 768px) {
+    .tienda {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        gap: 20px;
+    }
+
+    .contenedor-bienvenida {
+        grid-column: 1 / -1;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
     .productos-contenedor {
         flex-direction: row;
         align-items: flex-start;
         max-width: 100%;
     }
+
     .categorias-contenedor {
         max-width: 250px;
-        max-height: 300px;
-        flex-shrink: 1;
+        max-height: 100%;
+    }
+
+    .productos-botones {
+        flex-direction: row;
+        gap: 10px;
     }
 }
