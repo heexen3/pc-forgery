@@ -25,18 +25,29 @@
         </button>
         <nav id="menu-navegacion">
             <a href="index.html">Cerrar sesión</a>
+            <a href="admin.html">Panel de Admin</a>
             <a href="historial.html">Ver Historial</a>
         </nav>
     </header>
     <main>
         <section class="contenido">
             <div class="admin-titulo">
-                <h2>Comandos Admin</h2>
+                <h2>Historial</h2>
             </div>
-            <div class="contenido-botones">
-                    <button id="btn-localstorage">Borrar LocalStorage</button>
-                    <button id="limpiar-historial">Limpiar Historial</button>
-                </div>
+            <div class="historial-contenedor">
+                <table class="historial-tabla">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Acción</th>
+                            <th>Usuario</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historial-body">
+                        <!-- Aquí se llenará el historial dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
         </section>
     </main>
     <footer>
@@ -45,8 +56,8 @@
     <!-- menú -->
     <script src="JS/nav.js"></script>
     <!-- logs -->
-     <script src="JS/logs.js"></script>
-    <!-- gestión de botones en Admin.html -->
-     <script src="JS/admin.js"></script>
+    <script src="js/logs.js"></script>
+    <!-- historial -->
+    <script src="js/historial.js"></script>
 </body>
 </html>
