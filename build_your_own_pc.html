@@ -32,80 +32,38 @@
             <a href="login.html">Login</a>
         </nav>
     </header>
-    <main class="wizard-container">
-    <!-- Ventana Principal del Asistente -->
-        <section class="window wizard-window">
-            <div class="barra-ventana">
-                <img src="img/wlogo.svg" alt="" class="wlogo" width="25px">
-                <span>Sobre nosotros</span>
-                <div class="botones-windows">
-                    <button class="boton-colapsar">-</button>
-                </div>
+    <main>
+        <section class="contenedor-wizard">
+            <nav class="pasos-armador" id="pasos-armador">
+                <!-- pasos: fabricante, cpu, placa, etc.. -->
+            </nav>
+
+            <div class="opciones-paso" id="opciones-paso">
+                <!-- JS inyecta tarjetas del paso actual -->
             </div>
-
-            <!-- CONTENEDOR REQUERIDO POR JS/ventanas.js -->
-            <div class="contenido-ventana">
-                <!-- Barra superior de pestañas/pasos -->
-                <nav class="wizard-steps" id="wizard-steps">
-                    <!-- se llena dinámicamente con JS -->
-                </nav>
-
-                <div class="wizard-content">
-                    <!-- Mensaje de Clippy con feedback de estado -->
-                    <div class="clippy-helper">
-                        <img src="img/help.png" alt="Clippy" class="clippy-img">
-                        <div class="clippy-dialog" id="clippy-msg">
-                            ¡Hola! Selecciona una plataforma para comenzar a armar tu equipo.
-                        </div>
-                    </div>
-
-                    <!-- Grilla donde se renderizan los productos de cada categoría -->
-                    <div id="grid-productos" class="grid-productos">
-                        <!-- Se inyecta por JS -->
-                    </div>
-                </div>
-
-                <!-- Controles de navegación -->
-                <div class="wizard-actions">
-                    <button id="btn-prev" class="btn-retro" disabled>&laquo; Anterior</button>
-                    <button id="btn-next" class="btn-retro">Siguiente &raquo;</button>
-                </div>
+            
+            <div class="botones-armador">
+                <button id="btn-anterior">Anterior</button>
+                <button id="btn-siguiente">Siguiente</button>
             </div>
         </section>
-
-    <!-- Barra lateral de Resumen y Validación (RF-07, RF-08) -->
-    <aside class="window summary-window">
-        <div class="window-header">
-            <span class="window-title">Resumen de Construcción</span>
-        </div>
-        <div class="summary-body">
-            <ul class="summary-list" id="summary-list">
-                <!-- Items elegidos -->
+        
+        <aside class="resumen">
+            <h2>Resumen de tu PC</h2>
+            <ul class="lista-seleccion" id="lista-seleccion">
+                <!-- JS va a inyectar aquí <li> por cada componente elegido -->
             </ul>
 
-            <div class="compatibility-box" id="compat-box">
-                <div class="compat-indicator" id="compat-indicator"></div>
-                <span id="compat-text">Estado: Sin componentes seleccionados</span>
-            </div>
+            <p class="precio-total">
+                Total: <strong id="precio-total">$0</strong>
+            </p>
+        </aside>
 
-            <div class="summary-total">
-                <span>Total Estimado:</span>
-                <strong id="total-price">$0</strong>
-            </div>
-
-            <div class="summary-buttons">
-                <button id="btn-reset" class="btn-retro">Reiniciar</button>
-                <button id="btn-add-cart" class="btn-retro btn-primary">Agregar al Carrito</button>
-            </div>
-        </div>
-    </aside>
-</main>
+    </main>
     <footer>
         Información de la empresa aquí.
     </footer>
 <script src="JS/nav.js"></script>
-<script src="JS/ventanas.js"></script>
-<script src="JS/componentesData.js"></script>
 <script src="JS/buildpc.js"></script>
         
 </body>
