@@ -19,7 +19,7 @@
     cursor: pointer;
 }
 
-nav {
+header nav {
     display: none;
 
     flex-direction: column;
@@ -33,11 +33,11 @@ nav {
     padding: 2px;
 }
 
-nav.menu-abierto {
+header nav.menu-abierto {
     display: flex;
 }
 
-nav a {
+header nav a {
     padding: 7px 9px;
 
     color: #000000;
@@ -49,7 +49,7 @@ nav a {
     white-space: nowrap;
 }
 
-nav a:hover {
+header nav a:hover {
     background-color: #000080;
     color: #ffffff;
 }
@@ -63,7 +63,7 @@ nav a:hover {
         display: none;
     }
 
-    nav {
+    header nav {
         display: flex;
 
         flex-direction: row;
@@ -75,7 +75,7 @@ nav a:hover {
         padding: 0 0 0 5px;
     }
 
-    nav a {
+    header nav a {
         padding: 5px 10px;
         font-size: 15px;
     }
