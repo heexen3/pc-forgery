@@ -16,6 +16,7 @@ section {
 /* articles */
 article {
     /* vacío */
+    padding: 0 0 10px 0;
     /* colores y borde */
     border: 2px inset #ffffff;
     box-sizing: border-box;
@@ -23,4 +24,8 @@ article {
 article span {
     font-size: 14px;
     color: #ffffff;
+}
+article button {
+    margin-top: 10px;
+    width: 100%;
 }
