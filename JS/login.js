@@ -1,7 +1,7 @@
 function validacionLogin(datosintento) {
     const usuarioGuardado = JSON.parse(localStorage.getItem('usuarios')) || [];
     
-    if (usuarioGuardado.lenght === 0) {
+    if (usuarioGuardado.length === 0) {
         alert("No se encontró ningún usuario registrado. Por favor, regístrese primero.");
         return false;
     }
@@ -11,10 +11,18 @@ function validacionLogin(datosintento) {
     usuario.usuario === datosintento.identificador
     );
 
+    if (!usuarioEncontrado) {
+    alert("Usuario o correo no encontrado.");
+    return false;
+}
+
     const identificadorValido = (datosintento.identificador === usuarioEncontrado.email || datosintento.identificador === usuarioEncontrado.usuario);
     const passwordValida = (datosintento.password === usuarioEncontrado.password);
 
     if (identificadorValido && passwordValida) {
+        if (!localStorage.getItem("usuarioActual")) {
+            localStorage.setItem("usuarioActual", JSON.stringify(usuarioEncontrado));
+        }
         if (usuarioEncontrado.rol === "admin") {
             alert("iniciado sesión como: "+usuarioEncontrado.rol);
             window.location.href = "admin.html";
@@ -44,6 +52,7 @@ const datosintento = {
 // Mensaje para el programador
 console.log("Intentando ingresar con:", datosintento);
 console.log("Usuario guardado en memoria:", JSON.parse(localStorage.getItem('usuarios')));
+registrarLog("El usuario hizo clic en Iniciar Sesión");
 validacionLogin(datosintento);
 });
 

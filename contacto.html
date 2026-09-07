@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
-    <link rel="stylesheet" href="CSS/pages/login.css">
+    <link rel="stylesheet" href="CSS/pages/contacto.css">
     <link rel="icon" href="img/wlogo.svg" type="image/svg+xml">
 </head>
 <body>
@@ -32,10 +32,26 @@
             <a href="login.html">Login</a>
         </nav>
     </header>
-    <main>
-        <section class="contacto">
-            <h3>Paciencia...</h3>
-            <p>Estamos trabajando para usted...</p>
+    <main class="contacto-contenido">
+        <section class="contacto-info">
+            <div class="contacto-titulo">
+                <h2>Contacto</h2>
+            </div>
+            <div class="contacto-formulario">
+                <form class="formulario" action="procesar_formulario.php" method="post">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            <p>¿Tienes alguna pregunta? ¡Estamos aquí para ayudarte!</p>
+            </div>
         </section>
     </main>
     <footer>
