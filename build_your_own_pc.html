@@ -32,93 +32,81 @@
             <a href="login.html">Login</a>
         </nav>
     </header>
-    <main class="armador">
-        <section class="armador-titulo">
-            <h1>Arma tu PC</h1>
-            <p>Selecciona tus componentes paso a paso</p>
-        </section>
-
-        <div class="armador-contenido">
-            <aside class="componentes">
-                <div class="componentes-titulo">
-                    <img src="img/hardware-icon.svg" alt="" class="hardware-icon">
-                    <h2>Componentes</h2>
+    <main class="wizard-container">
+    <!-- Ventana Principal del Asistente -->
+        <section class="window wizard-window">
+            <div class="barra-ventana">
+                <img src="img/wlogo.svg" alt="" class="wlogo" width="25px">
+                <span>Sobre nosotros</span>
+                <div class="botones-windows">
+                    <button class="boton-colapsar">-</button>
                 </div>
-                <div class="componentes-lista">
-                    <button class="componente activo">Procesador</button>
-                    <button class="componente">Placa Madre</button>
-                    <button class="componente">Memoria RAM</button>
-                    <button class="componente">Tarjeta Gráfica</button>
-                    <button class="componente">Almacenamiento</button>
-                    <button class="componente">Fuente de Poder</button>
-                    <button class="componente">Gabinete</button></div>
-            </aside>
-            
-            <section class="selector-componentes">
-                <div class="selector-titulo">
-                    <h2>Selecciona tu Procesador</h2>
-                </div>
-                
-                <div class="fabricantes">
-                    <button class="fabricante activo">Intel</button>
-                    <button class="fabricante">AMD</button>
-                </div>
-
-                <div class="lista-productos">
-                    <div class="producto">
-            <div class="producto-info">
-                <strong>Intel Core i3-12100F</strong>
-                <p>4 núcleos / 8 hilos</p>
             </div>
 
-            <span class="precio">$89.990</span>
+            <!-- CONTENEDOR REQUERIDO POR JS/ventanas.js -->
+            <div class="contenido-ventana">
+                <!-- Barra superior de pestañas/pasos -->
+                <nav class="wizard-steps" id="wizard-steps">
+                    <!-- se llena dinámicamente con JS -->
+                </nav>
 
-            <button>Seleccionar</button>
-        </div>
+                <div class="wizard-content">
+                    <!-- Mensaje de Clippy con feedback de estado -->
+                    <div class="clippy-helper">
+                        <img src="img/help.png" alt="Clippy" class="clippy-img">
+                        <div class="clippy-dialog" id="clippy-msg">
+                            ¡Hola! Selecciona una plataforma para comenzar a armar tu equipo.
+                        </div>
+                    </div>
 
-        <div class="producto">
-            <div class="producto-info">
-                <strong>Intel Core i5-12400F</strong>
-                <p>6 núcleos / 12 hilos</p>
-            </div>
-
-            <span class="precio">$139.990</span>
-
-            <button>Seleccionar</button>
-        </div>
-
-        <div class="producto">
-            <div class="producto-info">
-                <strong>Intel Core i7-12700F</strong>
-                <p>12 núcleos / 20 hilos</p>
-            </div>
-
-            <span class="precio">$249.990</span>
-
-            <button>Seleccionar</button>
-        </div>
+                    <!-- Grilla donde se renderizan los productos de cada categoría -->
+                    <div id="grid-productos" class="grid-productos">
+                        <!-- Se inyecta por JS -->
+                    </div>
                 </div>
 
-            </section>
-        </div>
-
-        <section class="resumen-armado">
-            <div class="resumen-titulo">
-                <h2>Resumen del armado</h2>
-            </div>
-            <div class="resumen-contenido">
-                <div class="resumen-datos">
-                    <p>Componentes seleccionados: <strong>0 / 7</strong></p>
-                    <p>Total estimado: <strong>$0</strong></p>
+                <!-- Controles de navegación -->
+                <div class="wizard-actions">
+                    <button id="btn-prev" class="btn-retro" disabled>&laquo; Anterior</button>
+                    <button id="btn-next" class="btn-retro">Siguiente &raquo;</button>
                 </div>
-
-                <button class="boton-finalizar">Finalizar armado</button>
             </div>
         </section>
-    </main>
+
+    <!-- Barra lateral de Resumen y Validación (RF-07, RF-08) -->
+    <aside class="window summary-window">
+        <div class="window-header">
+            <span class="window-title">Resumen de Construcción</span>
+        </div>
+        <div class="summary-body">
+            <ul class="summary-list" id="summary-list">
+                <!-- Items elegidos -->
+            </ul>
+
+            <div class="compatibility-box" id="compat-box">
+                <div class="compat-indicator" id="compat-indicator"></div>
+                <span id="compat-text">Estado: Sin componentes seleccionados</span>
+            </div>
+
+            <div class="summary-total">
+                <span>Total Estimado:</span>
+                <strong id="total-price">$0</strong>
+            </div>
+
+            <div class="summary-buttons">
+                <button id="btn-reset" class="btn-retro">Reiniciar</button>
+                <button id="btn-add-cart" class="btn-retro btn-primary">Agregar al Carrito</button>
+            </div>
+        </div>
+    </aside>
+</main>
     <footer>
         Información de la empresa aquí.
     </footer>
-    <script src="JS/nav.js"></script>
+<script src="JS/nav.js"></script>
+<script src="JS/ventanas.js"></script>
+<script src="JS/componentesData.js"></script>
+<script src="JS/buildpc.js"></script>
+        
 </body>
 </html>

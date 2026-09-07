@@ -1,10 +1,11 @@
 @import url(nav.css);
 header {
-    width: 90%;
+    width: 95%;
     max-width: 1200px;
-    margin: 20px auto 0;
+    margin: 15px auto 0;
     background-color: #c0c0c0;
     border: 2px outset #ffffff;
+    box-sizing: border-box;
 }
 
 .barra-ventana {
