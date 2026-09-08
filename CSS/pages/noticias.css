@@ -81,6 +81,7 @@ main {
     background-color: #c0c0c0;
     border: 2px outset #ffffff;
     box-sizing: border-box;
+    justify-content: center;
 }
 
 .contenedor-noticia-detalle .noticia-meta {
@@ -98,8 +99,8 @@ main {
     width: 80%;
     max-height: 400px;
     object-fit: cover;
-    margin-top: 10px;
     border: 2px inset #ffffff;
+    margin: 10px auto;
 }
 
 .noticia-imagen-secundaria {
