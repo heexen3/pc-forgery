@@ -9,5 +9,4 @@ document.getElementById("limpiar-historial").addEventListener("click", function(
     localStorage.removeItem("logs");
     console.log("Limpiar historial");
     alert("Limpiar historial");
-    registrarLog("El usuario hizo clic en Limpiar Historial");
 });

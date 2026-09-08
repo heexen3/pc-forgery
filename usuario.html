@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
-    <link rel="stylesheet" href="CSS/pages/contacto.css">
+    <title>Usuario</title>
+    <link rel="stylesheet" href="CSS/pages/usuario.css">
     <link rel="icon" href="img/wlogo.svg" type="image/svg+xml">
 </head>
 <body>
@@ -27,8 +27,6 @@
             <a href="index.html">Inicio</a>
             <a href="tienda.html">Tienda</a>
             <a href="build_your_own_pc.html">Arma tu PC</a>
-            <a href="comunidad.html">Comunidad</a>
-            <a href="noticias.html">Noticias</a>
             <a href="nosotros.html">Quiénes somos</a>
             <a href="contacto.html">Contacto</a>
             <!-- Usuario no logueado -->
@@ -36,39 +34,37 @@
                 
             <!-- Usuario normal logueado -->
             <a href="usuario.html" id="usuario-link" style="display: none;">Usuario</a>
-            
                 
             <!-- Administrador -->
             <a href="admin.html" id="admin-link" style="display: none;">Admin</a>
+            <!-- historial -->
             <a href="historial.html" id="admin-historial-link" style="display: none;">Ver Historial</a>
             <a href="#" id="logout-link" style="display: none;">Cerrar sesión</a>
         </nav>
     </header>
-    <main class="contacto-contenido">
-        <section class="contacto-info">
-            <div class="contacto-titulo">
-                <h2>Contacto</h2>
+    <main>
+        <section class="contenido">
+            <div class="usuario-titulo">
+                <h2>Usuario: <span id="nombre-usuario"></span></h2>
             </div>
-            <div class="contacto-formulario">
-                <form class="formulario" action="procesar_formulario.php" method="post">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required>
-
-                    <label for="email">Correo electrónico:</label>
-                    <input type="email" id="email" name="email" required>
-
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-
-                    <button type="submit">Enviar</button>
-                </form>
-            <p>¿Tienes alguna pregunta? ¡Estamos aquí para ayudarte!</p>
+            <div class="contenedor-usuario">
+            <div class="usuario-foto">
+                <img src="img/usuario-generico.jpg" alt="Foto de perfil" id="foto-perfil" class="foto-perfil">
+            </div>
+            <div class="usuario-descripcion">
+                <p>Bienvenido a tu perfil de usuario. Aquí puedes ver y actualizar tu información personal, así como acceder a tus pedidos y configuraciones.</p>
+            </div>
             </div>
         </section>
     </main>
     <footer>
         Información de la empresa aquí.
     </footer>
+    <!-- menú -->
     <script src="JS/nav.js"></script>
+    <!-- logs -->
+     <script src="JS/logs.js"></script>
+    <!-- usuario -->
+     <script src="JS/usuario.js"></script>
 </body>
 </html>
