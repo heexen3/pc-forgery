@@ -1,0 +1,189 @@
+@import url(../header.css);
+@import url(../section.css);
+@import url(../footer.css);
+@import url(../styles.css);
+
+/* Mobile */
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 15px auto;
+}
+
+.cabecera-foro {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+
+    padding: 10px;
+}
+
+.cabecera-titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+    margin: 5px;
+}
+.cabecera-titulo h1 {
+    font-size: 36px;
+}
+
+.lista-hilos {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    padding: 0 10px 10px;
+}
+
+.hilo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    padding: 10px;
+    background-color: #c0c0c0;
+    border: 2px outset #ffffff;
+    box-sizing: border-box;
+}
+
+.hilo-titulo {
+    font-size: 15px;
+}
+
+.hilo-meta {
+    font-size: 12px;
+    color: #333333;
+}
+
+.hilo-stats {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.hilo-detalle {
+    margin: 0 10px 10px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 2px inset #ffffff;
+    box-sizing: border-box;
+}
+
+.mensaje {
+    padding: 8px;
+    margin-top: 8px;
+    background-color: #f0f0f0;
+    border: 1px solid #808080;
+}
+
+.mensaje-original {
+    background-color: #e8e8f8;
+}
+
+.mensaje-autor {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.mensaje-texto {
+    font-size: 13px;
+}
+
+.caja-respuesta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    margin-top: 15px;
+}
+
+.caja-respuesta textarea {
+    resize: vertical;
+    min-height: 60px;
+    padding: 6px;
+    font-family: inherit;
+    border: 2px inset #ffffff;
+}
+
+.boton-nuevo-hilo, .boton-volver {
+    display: inline-block;
+
+    padding: 4px 12px;
+    background-color: #c0c0c0;
+    border: 2px outset #ffffff;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.boton-nuevo-hilo:active, .boton-volver:active {
+    border: 2px inset #ffffff;
+}
+
+.formulario-hilo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    margin: 0 10px 10px;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 2px inset #ffffff;
+    box-sizing: border-box;
+}
+
+.formulario-hilo label {
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.formulario-hilo input,
+.formulario-hilo select,
+.formulario-hilo textarea {
+    padding: 6px;
+    font-family: inherit;
+    font-size: 13px;
+    border: 2px inset #ffffff;
+    box-sizing: border-box;
+}
+
+.formulario-hilo textarea {
+    resize: vertical;
+}
+
+.acciones-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-start;
+
+    margin-top: 10px;
+}
+
+.aviso-formulario {
+    font-size: 12px;
+    color: #555555;
+    font-style: italic;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+
+    .cabecera-foro {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hilo {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}

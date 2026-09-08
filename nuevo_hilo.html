@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
-    <link rel="stylesheet" href="CSS/pages/contacto.css">
+    <title>Nuevo Hilo</title>
+    <link rel="stylesheet" href="CSS/pages/comunidad.css">
     <link rel="icon" href="img/wlogo.svg" type="image/svg+xml">
 </head>
 <body>
     <header>
         <div class="barra-ventana">
             <div class="marca">
-            <img src="img/wlogo.svg" alt="" class="wlogo" width="25px">
-            <span>PC Forgery</span>
-        </div>
-        <div class="botones-windows">
+                <img src="img/wlogo.svg" alt="" class="wlogo" width="25px">
+                <span>PC Forgery</span>
+            </div>
+            <div class="botones-windows">
                 <button>_</button>
                 <button>□</button>
                 <button>×</button>
@@ -33,42 +33,49 @@
             <a href="contacto.html">Contacto</a>
             <!-- Usuario no logueado -->
             <a href="login.html" id="login-link">Login</a>
-                
             <!-- Usuario normal logueado -->
             <a href="usuario.html" id="usuario-link" style="display: none;">Usuario</a>
-            
-                
             <!-- Administrador -->
             <a href="admin.html" id="admin-link" style="display: none;">Admin</a>
             <a href="historial.html" id="admin-historial-link" style="display: none;">Ver Historial</a>
             <a href="#" id="logout-link" style="display: none;">Cerrar sesión</a>
         </nav>
     </header>
-    <main class="contacto-contenido">
-        <section class="contacto-info">
-            <div class="contacto-titulo">
-                <h2>Contacto</h2>
+
+    <main>
+        <section class="contenedor-foro">
+            <div class="cabecera-foro">
+                <h1>Nuevo hilo</h1>
+                <a href="comunidad.html" class="boton-volver">← Volver a Comunidad</a>
             </div>
-            <div class="contacto-formulario">
-                <form class="formulario" action="procesar_formulario.php" method="post">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required>
 
-                    <label for="email">Correo electrónico:</label>
-                    <input type="email" id="email" name="email" required>
+            <form class="formulario-hilo">
+                <label for="titulo-hilo">Título</label>
+                <input type="text" id="titulo-hilo" name="titulo" placeholder="Escribe un título claro para tu hilo">
 
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                <label for="categoria-hilo">Categoría</label>
+                <select id="categoria-hilo" name="categoria">
+                    <option value="armado">Armado de PC</option>
+                    <option value="soporte">Soporte técnico</option>
+                    <option value="showcase">Showcase</option>
+                    <option value="general">General</option>
+                </select>
 
-                    <button type="submit">Enviar</button>
-                </form>
-            <p>¿Tienes alguna pregunta? ¡Estamos aquí para ayudarte!</p>
-            </div>
+                <label for="mensaje-hilo">Mensaje</label>
+                <textarea id="mensaje-hilo" name="mensaje" placeholder="Cuéntanos en detalle tu consulta o publicación..." rows="8"></textarea>
+
+                <div class="acciones-formulario">
+                    <button type="submit" class="boton-postear" disabled>Postear</button>
+                    <span class="aviso-formulario">Publicar hilos estará disponible próximamente.</span>
+                </div>
+            </form>
         </section>
     </main>
+
     <footer>
         Información de la empresa aquí.
     </footer>
+
     <script src="JS/nav.js"></script>
 </body>
 </html>

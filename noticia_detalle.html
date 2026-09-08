@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosotros</title>
-    <link rel="stylesheet" href="CSS/pages/nosotros.css">
+    <title>Noticia — Nueva generación de tarjetas gráficas</title>
+    <link rel="stylesheet" href="CSS/pages/noticias.css">
     <link rel="icon" href="img/wlogo.svg" type="image/svg+xml">
 </head>
 <body>
     <header>
         <div class="barra-ventana">
             <div class="marca">
-            <img src="img/wlogo.svg" alt="" class="wlogo" width="25px">
-            <span>PC Forgery</span>
-        </div>
-        <div class="botones-windows">
+                <img src="img/wlogo.svg" alt="" class="wlogo" width="25px">
+                <span>PC Forgery</span>
+            </div>
+            <div class="botones-windows">
                 <button>_</button>
                 <button>□</button>
                 <button>×</button>
@@ -33,94 +33,62 @@
             <a href="contacto.html">Contacto</a>
             <!-- Usuario no logueado -->
             <a href="login.html" id="login-link">Login</a>
-                
             <!-- Usuario normal logueado -->
             <a href="usuario.html" id="usuario-link" style="display: none;">Usuario</a>
-            
-                
             <!-- Administrador -->
             <a href="admin.html" id="admin-link" style="display: none;">Admin</a>
             <a href="historial.html" id="admin-historial-link" style="display: none;">Ver Historial</a>
             <a href="#" id="logout-link" style="display: none;">Cerrar sesión</a>
         </nav>
     </header>
+
     <main>
-        <section class="nosotros">
-            <div class="barra-ventana">
-                    <img src="img/wlogo.svg" alt="" class="wlogo" width="25px">
-                    <span>Sobre nosotros</span>
-                    <div class="botones-windows">
-                        <button class="boton-colapsar">-</button>
-                    </div>
-            </div>
-            <div class="contenido-ventana nosotros-contenido">
-                <div class="titulo nosotros-titulo">
-                    <img src="img/us.png" alt="" height="48px">
-                    <h1>¿Quiénes somos?</h1>
-                </div>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Iure natus veritatis ullam praesentium voluptas perspiciatis 
-                    voluptatem, nihil inventore. Excepturi reprehenderit, quae 
-                    quia maiores nesciunt saepe soluta iure natus exercitationem amet.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Iure natus veritatis ullam praesentium voluptas perspiciatis 
-                    voluptatem, nihil inventore. Excepturi reprehenderit, quae 
-                    quia maiores nesciunt saepe soluta iure natus exercitationem amet.
-                </p>
-            </div>
-        </section>
+        <!-- esta página muestra por ahora el contenido de una sola noticia de ejemplo -->
+        <article class="contenedor-noticia-detalle">
+            <a href="noticias.html" class="boton-volver">← Volver a Noticias</a>
 
-        <section class="mision">
-            <div class="barra-ventana">
-                    <img src="img/wlogo.svg" alt="" class="wlogo" width="25px">
-                    <span>Nuestra misión</span>
-                    <div class="botones-windows">
-                        <button class="boton-colapsar">-</button>
-                    </div>
-            </div>
-            
-            <div class="contenido-ventana mision-contenido">
-                <div class="titulo mision-titulo">
-                    <img src="img/group.png" alt="" height="48px">
-                    <h1>Misión</h1>
-                </div>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Iure natus veritatis ullam praesentium voluptas perspiciatis 
-                    voluptatem, nihil inventore. Excepturi reprehenderit, quae 
-                    quia maiores nesciunt saepe soluta iure natus exercitationem amet.
-                </p>
-            </div>
-        </section>
+            <h1>DETALLE DE NOTICIA IMPORTANTE</h1>
+            <p class="noticia-meta">Publicado el 03 de septiembre, 2026</p>
 
-        <section class="vision">
-            <div class="barra-ventana">
-                    <img src="img/wlogo.svg" alt="" class="wlogo" width="25px">
-                    <span>Nuestra visión</span>
-                    <div class="botones-windows">
-                        <button class="boton-colapsar">-</button>
-                    </div>
-            </div>
-            <div class="contenido-ventana vision-contenido">
-                <div class="titulo vision-titulo">
-                <img src="img/net.png" alt="" height="48px">
-                <h1>Visión</h1>
-            </div>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            <img src="img/noticia1.webp" alt="Nueva tarjeta gráfica en exhibición" class="noticia-imagen-principal">
+
+            <div class="noticia-cuerpo">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Iure natus veritatis ullam praesentium voluptas perspiciatis 
                     voluptatem, nihil inventore. Excepturi reprehenderit, quae 
                     quia maiores nesciunt saepe soluta iure natus exercitationem amet.
-                </p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Iure natus veritatis ullam praesentium voluptas perspiciatis 
+                    voluptatem, nihil inventore. Excepturi reprehenderit, quae 
+                    quia maiores nesciunt saepe soluta iure natus exercitationem amet.</p>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Iure natus veritatis ullam praesentium voluptas perspiciatis 
+                    voluptatem, nihil inventore. Excepturi reprehenderit, quae 
+                    quia maiores nesciunt saepe soluta iure natus exercitationem amet.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Iure natus veritatis ullam praesentium voluptas perspiciatis 
+                    voluptatem, nihil inventore. Excepturi reprehenderit, quae 
+                    quia maiores nesciunt saepe soluta iure natus exercitationem amet.</p>
+
+                <img src="img/monalisa.jpeg" alt="Gráfico comparativo de rendimiento" class="noticia-imagen-secundaria">
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Iure natus veritatis ullam praesentium voluptas perspiciatis 
+                    voluptatem, nihil inventore. Excepturi reprehenderit, quae 
+                    quia maiores nesciunt saepe soluta iure natus exercitationem amet.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Iure natus veritatis ullam praesentium voluptas perspiciatis 
+                    voluptatem, nihil inventore. Excepturi reprehenderit, quae 
+                    quia maiores nesciunt saepe soluta iure natus exercitationem amet.</p>
             </div>
-        </section>
-        
+        </article>
     </main>
+
     <footer>
         Información de la empresa aquí.
     </footer>
+
     <script src="JS/nav.js"></script>
-    <script src="JS/ventanas.js"></script>
 </body>
 </html>
