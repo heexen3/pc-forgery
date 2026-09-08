@@ -4,7 +4,7 @@ function validacionRegistro() {
     let password = document.getElementById("password").value;
     let confirmPassword = document.getElementById("confirm_password").value;
 
-    const regexPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&.]).{6,}$/;
+    const regexPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&.-]).{6,}$/;
 
     const regexEmail = /^[a-zA-Z0-9._%+-]+@(gmail\.com|outlook\.com|duocuc\.cl)$/;
 
@@ -55,5 +55,7 @@ function validacionRegistro() {
     localStorage.setItem("usuarios", JSON.stringify(listaUsuarios))
     alert("¡Usuario registrado con éxito!");
     registrarLog("El usuario " + usuario + " se registró con éxito.");
+    window.location.href = 'login.html';
+    alert("Validar registro");
     return false;
 }

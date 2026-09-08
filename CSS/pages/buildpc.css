@@ -89,7 +89,7 @@
 
 /* Barra superior de pestañas de navegación con scroll horizontal táctil */
 #wizard-steps.wizard-steps {
-    display: flex !important;
+    display: flex;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
     align-items: flex-end !important;

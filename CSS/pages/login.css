@@ -41,3 +41,8 @@ input {
 .registro {
     padding-top: 10px;
 }
+
+.registrarse-boton {
+    text-decoration: underline;
+    color: mediumblue;
+}
