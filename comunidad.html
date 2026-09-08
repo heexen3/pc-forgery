@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidad</title>
+    <link rel="stylesheet" href="CSS/pages/comunidad.css">
+    <link rel="icon" href="img/wlogo.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="barra-ventana">
+            <div class="marca">
+                <img src="img/wlogo.svg" alt="" class="wlogo" width="25px">
+                <span>PC Forgery</span>
+            </div>
+            <div class="botones-windows">
+                <button>_</button>
+                <button>□</button>
+                <button>×</button>
+            </div>
+        </div>
+        <button class="boton-menu" id="boton-menu">
+            ☰ Menú
+        </button>
+        <nav id="menu-navegacion">
+            <a href="index.html">Inicio</a>
+            <a href="tienda.html">Tienda</a>
+            <a href="build_your_own_pc.html">Arma tu PC</a>
+            <a href="comunidad.html">Comunidad</a>
+            <a href="noticias.html">Noticias</a>
+            <a href="nosotros.html">Quiénes somos</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contenedor-foro">
+            <div class="cabecera-foro">
+                <h1>Comunidad</h1>
+                <button class="boton-nuevo-hilo">+ Nuevo hilo</button>
+            </div>
+
+            <ul class="lista-hilos">
+                <li class="hilo">
+                    <div class="hilo-info">
+                        <h2 class="hilo-titulo">¿Qué placa madre me recomiendan para un Ryzen 5 5600?</h2>
+                        <p class="hilo-meta">Publicado por <strong>jgamer99</strong> · Categoría: Armado de PC</p>
+                    </div>
+                    <div class="hilo-stats">
+                        <span>12 respuestas</span>
+                    </div>
+                </li>
+
+                <li class="hilo">
+                    <div class="hilo-info">
+                        <h2 class="hilo-titulo">Mi PC no enciende después de cambiar la fuente de poder</h2>
+                        <p class="hilo-meta">Publicado por <strong>anafix</strong> · Categoría: Soporte técnico</p>
+                    </div>
+                    <div class="hilo-stats">
+                        <span>7 respuestas</span>
+                    </div>
+                </li>
+
+                <li class="hilo">
+                    <div class="hilo-info">
+                        <h2 class="hilo-titulo">Muestren sus setups armados con PC Forgery</h2>
+                        <p class="hilo-meta">Publicado por <strong>retrotech_cl</strong> · Categoría: Showcase</p>
+                    </div>
+                    <div class="hilo-stats">
+                        <span>34 respuestas</span>
+                    </div>
+                </li>
+            </ul>
+
+            <article class="hilo-detalle">
+                <h2>¿Qué placa madre me recomiendan para un Ryzen 5 5600?</h2>
+                <p class="hilo-meta">Publicado por <strong>jgamer99</strong></p>
+
+                <div class="mensaje mensaje-original">
+                    <p class="mensaje-autor">jgamer99</p>
+                    <p class="mensaje-texto">Ando armando un PC nuevo y ya tengo el procesador, pero no sé bien qué placa madre elegir. ¿Alguna recomendación en el catálogo de la tienda?</p>
+                </div>
+
+                <div class="mensaje">
+                    <p class="mensaje-autor">retrotech_cl</p>
+                    <p class="mensaje-texto">Yo usé la ASUS Prime B450M-A y me fue bien, tiene socket AM4 igual que tu procesador.</p>
+                </div>
+
+                <div class="mensaje">
+                    <p class="mensaje-autor">anafix</p>
+                    <p class="mensaje-texto">Depende también de si quieres overclockear después, ahí conviene una gama más alta.</p>
+                </div>
+
+                <div class="caja-respuesta">
+                    <textarea placeholder="Escribe tu respuesta..." disabled></textarea>
+                    <button disabled>Responder</button>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        Información de la empresa aquí.
+    </footer>
+
+    <script src="JS/nav.js"></script>
+</body>
+</html>
