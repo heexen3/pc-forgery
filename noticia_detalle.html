@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticia — Nueva generación de tarjetas gráficas</title>
+    <link rel="stylesheet" href="CSS/pages/noticias.css">
+    <link rel="icon" href="img/wlogo.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="barra-ventana">
+            <div class="marca">
+                <img src="img/wlogo.svg" alt="" class="wlogo" width="25px">
+                <span>PC Forgery</span>
+            </div>
+            <div class="botones-windows">
+                <button>_</button>
+                <button>□</button>
+                <button>×</button>
+            </div>
+        </div>
+        <button class="boton-menu" id="boton-menu">
+            ☰ Menú
+        </button>
+        <nav id="menu-navegacion">
+            <a href="index.html">Inicio</a>
+            <a href="tienda.html">Tienda</a>
+            <a href="build_your_own_pc.html">Arma tu PC</a>
+            <a href="comunidad.html">Comunidad</a>
+            <a href="noticias.html">Noticias</a>
+            <a href="nosotros.html">Quiénes somos</a>
+            <a href="contacto.html">Contacto</a>
+            <!-- Usuario no logueado -->
+            <a href="login.html" id="login-link">Login</a>
+            <!-- Usuario normal logueado -->
+            <a href="usuario.html" id="usuario-link" style="display: none;">Usuario</a>
+            <!-- Administrador -->
+            <a href="admin.html" id="admin-link" style="display: none;">Admin</a>
+            <a href="historial.html" id="admin-historial-link" style="display: none;">Ver Historial</a>
+            <a href="#" id="logout-link" style="display: none;">Cerrar sesión</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- esta página muestra por ahora el contenido de una sola noticia de ejemplo -->
+        <article class="contenedor-noticia-detalle">
+            <a href="noticias.html" class="boton-volver">← Volver a Noticias</a>
+
+            <h1>DETALLE DE NOTICIA IMPORTANTE</h1>
+            <p class="noticia-meta">Publicado el 03 de septiembre, 2026</p>
+
+            <img src="img/noticia1.webp" alt="Nueva tarjeta gráfica en exhibición" class="noticia-imagen-principal">
+
+            <div class="noticia-cuerpo">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Iure natus veritatis ullam praesentium voluptas perspiciatis 
+                    voluptatem, nihil inventore. Excepturi reprehenderit, quae 
+                    quia maiores nesciunt saepe soluta iure natus exercitationem amet.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Iure natus veritatis ullam praesentium voluptas perspiciatis 
+                    voluptatem, nihil inventore. Excepturi reprehenderit, quae 
+                    quia maiores nesciunt saepe soluta iure natus exercitationem amet.</p>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Iure natus veritatis ullam praesentium voluptas perspiciatis 
+                    voluptatem, nihil inventore. Excepturi reprehenderit, quae 
+                    quia maiores nesciunt saepe soluta iure natus exercitationem amet.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Iure natus veritatis ullam praesentium voluptas perspiciatis 
+                    voluptatem, nihil inventore. Excepturi reprehenderit, quae 
+                    quia maiores nesciunt saepe soluta iure natus exercitationem amet.</p>
+
+                <img src="img/monalisa.jpeg" alt="Gráfico comparativo de rendimiento" class="noticia-imagen-secundaria">
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Iure natus veritatis ullam praesentium voluptas perspiciatis 
+                    voluptatem, nihil inventore. Excepturi reprehenderit, quae 
+                    quia maiores nesciunt saepe soluta iure natus exercitationem amet.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Iure natus veritatis ullam praesentium voluptas perspiciatis 
+                    voluptatem, nihil inventore. Excepturi reprehenderit, quae 
+                    quia maiores nesciunt saepe soluta iure natus exercitationem amet.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        Información de la empresa aquí.
+    </footer>
+
+    <script src="JS/nav.js"></script>
+</body>
+</html>

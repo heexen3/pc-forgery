@@ -31,15 +31,25 @@
             <a href="noticias.html">Noticias</a>
             <a href="nosotros.html">Quiénes somos</a>
             <a href="contacto.html">Contacto</a>
-            <a href="login.html">Login</a>
+            <!-- Usuario no logueado -->
+            <a href="login.html" id="login-link">Login</a>
+            <!-- Usuario normal logueado -->
+            <a href="usuario.html" id="usuario-link" style="display: none;">Usuario</a>
+            <!-- Administrador -->
+            <a href="admin.html" id="admin-link" style="display: none;">Admin</a>
+            <a href="historial.html" id="admin-historial-link" style="display: none;">Ver Historial</a>
+            <a href="#" id="logout-link" style="display: none;">Cerrar sesión</a>
         </nav>
     </header>
 
     <main>
         <section class="contenedor-foro">
             <div class="cabecera-foro">
-                <h1>Comunidad</h1>
-                <button class="boton-nuevo-hilo">+ Nuevo hilo</button>
+                <div class="cabecera-titulo">
+                    <img src="img/computer.png" alt="">
+                    <h1>Comunidad</h1>
+                </div>
+                <a href="nuevo_hilo.html" class="boton-nuevo-hilo">+ Nuevo hilo</a>
             </div>
 
             <ul class="lista-hilos">
