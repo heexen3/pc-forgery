@@ -1,6 +1,6 @@
-@import url(../styles.css);
-@import url(../header.css);
-@import url(../footer.css);
+@import url(./App.css);
+@import url(./components/Header.css);
+@import url(./components/Footer.css);
 
 form {
     display: flex;
