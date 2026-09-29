@@ -8,6 +8,7 @@ const PASOS = [
     { key: "almacenamiento", label: "5. Disco" },
     { key: "fuentes", label: "6. Fuente" },
     { key: "gabinetes", label: "7. Gabinete" }
+
 ];
 
 // Estado global de la construcción
