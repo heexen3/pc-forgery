@@ -280,3 +280,5 @@ const DB_COMPONENTES = {
         }
     ]
 };
+
+export default DB_COMPONENTES;
