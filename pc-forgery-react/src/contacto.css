@@ -1,26 +1,27 @@
-@import url(../styles.css);
-@import url(../header.css);
-@import url(../footer.css);
+@import url(./App.css);
+@import url(./components/Header.css);
+@import url(./components/Footer.css);
+
 /* mobile */
 .contacto-contenido {
     width: 90%;
     max-width: 1200px;
     margin: 20px auto;
 }
+
 .contacto-titulo {
     height: 33px;
     display: flex;
     width: 100%;
     align-items: center;
-    
+
     padding: 0 5px;
-    background: linear-gradient(
-        to right,
-        #000080,
-        #537d99
-    );
+    background: linear-gradient(to right,
+            #000080,
+            #537d99);
     margin-bottom: 4px;
 }
+
 .contacto-info {
     width: 100%;
     background-color: #c0c0c0;
@@ -53,6 +54,7 @@
     color: #ffffff;
     font-weight: normal;
 }
+
 @media (min-width: 768px) {
     .formulario {
         width: 500px;
