@@ -1,5 +1,5 @@
 import VentanaColapsable from "./components/VentanaColapsable"
-import Nav from "./components/Nav"
+import { Link } from "react-router-dom";
 import './Home.css'
 import './App.css'
 
@@ -15,7 +15,7 @@ function Home() {
         <div className="hero-contenido">
           <p>¡Tu primer PC lo armas aquí!</p>
           <p>Aprende, elige tus componentes y construye tu propio computador.</p>
-          <a href="/tienda">Llévame a la tienda</a>
+          <Link to="/Shop">Llévame a la tienda</Link>
         </div>
       </section>
 

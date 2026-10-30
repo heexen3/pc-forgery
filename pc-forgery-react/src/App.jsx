@@ -13,6 +13,7 @@ import NoticiaDetalle from './NoticiaDetalle.jsx'
 import Comunidad from './Comunidad.jsx'
 import Contacto from './Contacto.jsx'
 import NuevoHilo from './NuevoHilo.jsx'
+import Usuario from './Usuario.jsx'
 function App() {
     return (
       <>
@@ -28,6 +29,7 @@ function App() {
                 <Route path="/Login" element={<Login />} />
                 <Route path="/Register" element={<Register />} />
                 {/* Rutas de usuario y admin */}
+                <Route path="/Usuario" element={<Usuario />} />
                 <Route path="/Admin" element={<Admin />} />
                 {/* Noticias */}
                 <Route path="/Noticias" element={<Noticia />} />

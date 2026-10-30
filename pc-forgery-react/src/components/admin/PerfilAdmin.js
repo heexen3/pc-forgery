@@ -2,7 +2,7 @@ export function obtenerPerfilAdmin() {
     return JSON.parse(localStorage.getItem("usuarioActual"))
 }
 
-export function guardarPerfilAdmin(nombre, correo) {
+export function guardarPerfilAdmin(nombre, correo, password) {
     const usuarioActual = obtenerPerfilAdmin()
 
     if (!usuarioActual) {
@@ -37,12 +37,24 @@ export function guardarPerfilAdmin(nombre, correo) {
         correo: correo.trim()
     }
 
+    // Actualizar contraseña solamente si se ingresó una nueva
+    if (password.trim() !== "") {
+        if (password.length < 6) {
+            return {
+                correcto: false,
+                mensaje: "La contraseña debe tener al menos 6 caracteres."
+            }
+        }
+
+        usuarioActualizado.password = password
+        usuarioActualizado.contrasena = password
+    }
+
     const usuariosActualizados = usuarios.map(usuario =>
         (usuario.correo || usuario.email) === correoActual
             ? {
                 ...usuario,
-                nombre: nombre.trim(),
-                correo: correo.trim()
+                ...usuarioActualizado
             }
             : usuario
     )

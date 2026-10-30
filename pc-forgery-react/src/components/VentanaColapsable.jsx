@@ -1,3 +1,5 @@
+import BotonesWindows from './BotonesWindows';
+
 import {useState} from 'react'
 
 function VentanaColapsable({titulo, className, children}) {
@@ -9,12 +11,10 @@ function VentanaColapsable({titulo, className, children}) {
         <img src="/img/wlogo.svg" alt="" className="wlogo" width="25px" />
         <span>{titulo}</span>
         <div className="botones-windows">
-          <button
-            className="boton-colapsar"
-            onClick={() => setColapsada(!colapsada)}
-          >
-            {colapsada ? "+" : "-"}
-          </button>
+          <BotonesWindows
+            colapsada={colapsada}
+            onColapsar={() => setColapsada(!colapsada)}
+          />
         </div>
       </div>
       <div className={`contenido-ventana ${colapsada ? "oculto" : ""}`}>

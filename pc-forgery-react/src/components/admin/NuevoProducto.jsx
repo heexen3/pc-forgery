@@ -10,6 +10,17 @@ function NuevoProducto() {
         imagen: ""
     })
 
+    const [crearNuevaCategoria, setCrearNuevaCategoria] = useState(false)
+
+    // Obtener categorías existentes
+    const productosGuardados = JSON.parse(
+        localStorage.getItem("productos")
+    ) || []
+
+    const categorias = [...new Set(
+        productosGuardados.map(producto => producto.categoria).filter(Boolean)
+    )]
+
     function manejarCambio(event) {
         const { name, value } = event.target
 
@@ -19,12 +30,32 @@ function NuevoProducto() {
         })
     }
 
+    function manejarCambioCategoria(event) {
+        const value = event.target.value
+
+        if (value === "crear_nueva") {
+            setCrearNuevaCategoria(true)
+
+            setProducto({
+                ...producto,
+                categoria: ""
+            })
+        } else {
+            setCrearNuevaCategoria(false)
+
+            setProducto({
+                ...producto,
+                categoria: value
+            })
+        }
+    }
+
     function manejarEnvio(event) {
         event.preventDefault()
 
         if (
             !producto.nombre.trim() ||
-            !producto.categoria ||
+            !producto.categoria.trim() ||
             producto.precio === "" ||
             producto.stock === ""
         ) {
@@ -40,24 +71,25 @@ function NuevoProducto() {
             return
         }
 
-        const productosGuardados = JSON.parse(
+        const productosActuales = JSON.parse(
             localStorage.getItem("productos")
         ) || []
 
         const nuevoProducto = {
             ...producto,
-            id: productosGuardados.length > 0
-                ? Math.max(...productosGuardados.map(producto => producto.id)) + 1
+            categoria: producto.categoria.trim(),
+            id: productosActuales.length > 0
+                ? Math.max(...productosActuales.map(producto => producto.id)) + 1
                 : 1,
             precio: Number(producto.precio),
             stock: Number(producto.stock)
         }
 
-        productosGuardados.push(nuevoProducto)
+        productosActuales.push(nuevoProducto)
 
         localStorage.setItem(
             "productos",
-            JSON.stringify(productosGuardados)
+            JSON.stringify(productosActuales)
         )
 
         alert("Producto creado correctamente.")
@@ -70,6 +102,8 @@ function NuevoProducto() {
             descripcion: "",
             imagen: ""
         })
+
+        setCrearNuevaCategoria(false)
     }
 
     return (
@@ -104,16 +138,34 @@ function NuevoProducto() {
                         id="categoria"
                         name="categoria"
                         className="form-select"
-                        value={producto.categoria}
-                        onChange={manejarCambio}
+                        value={crearNuevaCategoria ? "crear_nueva" : producto.categoria}
+                        onChange={manejarCambioCategoria}
                         required
                     >
                         <option value="">Selecciona una categoría</option>
-                        <option value="Perifericos">Periféricos</option>
-                        <option value="Componentes">Componentes</option>
-                        <option value="Monitores">Monitores</option>
-                        <option value="Almacenamiento">Almacenamiento</option>
+
+                        {categorias.map((categoria) => (
+                            <option key={categoria} value={categoria}>
+                                {categoria}
+                            </option>
+                        ))}
+
+                        <option value="crear_nueva">
+                            Crear una nueva...
+                        </option>
                     </select>
+
+                    {crearNuevaCategoria && (
+                        <input
+                            type="text"
+                            name="categoria"
+                            className="form-control mt-2"
+                            placeholder="Escribe el nombre de la nueva categoría"
+                            value={producto.categoria}
+                            onChange={manejarCambio}
+                            required
+                        />
+                    )}
                 </div>
 
                 <div className="mb-3">
