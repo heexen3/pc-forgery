@@ -7,6 +7,7 @@ import {
 function PerfilAdmin() {
     const [nombre, setNombre] = useState("")
     const [correo, setCorreo] = useState("")
+    const [password, setPassword] = useState("")
     const [mensaje, setMensaje] = useState("")
 
     useEffect(() => {
@@ -23,7 +24,7 @@ function PerfilAdmin() {
     function guardarCambios(e) {
         e.preventDefault()
 
-        const resultado = guardarPerfilAdmin(nombre, correo)
+        const resultado = guardarPerfilAdmin(nombre, correo, password)
 
         setMensaje(resultado.mensaje)
 
@@ -34,6 +35,8 @@ function PerfilAdmin() {
                 setNombre(usuarioActual.nombre || usuarioActual.usuario || "")
                 setCorreo(usuarioActual.correo || usuarioActual.email || "")
             }
+
+            setPassword("")
         }
     }
 
@@ -72,6 +75,22 @@ function PerfilAdmin() {
                             value={correo}
                             onChange={e => setCorreo(e.target.value)}
                             required
+                        />
+                    </div>
+
+                    <div className="mb-3">
+                        <label htmlFor="perfilPassword" className="form-label">
+                            Nueva contraseña
+                        </label>
+
+                        <input
+                            type="password"
+                            id="perfilPassword"
+                            className="form-control"
+                            value={password}
+                            onChange={e => setPassword(e.target.value)}
+                            placeholder="Dejar vacío para mantener la actual"
+                            minLength={6}
                         />
                     </div>
 

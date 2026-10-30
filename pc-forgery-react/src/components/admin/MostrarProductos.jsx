@@ -1,6 +1,9 @@
-import { useState } from "react"
+import { useState, useRef } from "react"
+import "./MostrarProductos.css"
 
 function MostrarProductos() {
+    const formularioRef = useRef(null)
+
     const [productos, setProductos] = useState(() => {
         
         const productosGuardados = localStorage.getItem("productos")
@@ -201,13 +204,13 @@ function MostrarProductos() {
     }}
 
     return (
-        <section className="contenido">
+        <section className="contenido mostrar-productos">
             <div className="admin-titulo">
                 <h2>Mostrar Productos</h2>
             </div>
 
             {productoEditar && (
-                <form onSubmit={guardarEdicion} className="mb-4">
+                <form ref={formularioRef} onSubmit={guardarEdicion} className="mb-4">
                     <h3>Editar producto</h3>
 
                     <div className="mb-3">
@@ -334,7 +337,15 @@ function MostrarProductos() {
                                     <button
                                         type="button"
                                         className="btn btn-admin btn-sm me-2 mb-1"
-                                        onClick={() => setProductoEditar({ ...producto })}
+                                        onClick={() => {
+                                            setProductoEditar({ ...producto })
+                                            setTimeout(() => {
+                                                formularioRef.current?.scrollIntoView({
+                                                    behavior: "smooth",
+                                                    block: "start"
+                                                })
+                                            }, 100)
+                                        }}
                                     >
                                         Editar
                                     </button>

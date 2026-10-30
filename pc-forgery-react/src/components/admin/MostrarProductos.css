@@ -1,0 +1,114 @@
+
+/* MostrarProductos.css */
+
+.mostrar-productos {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+/* Tabla en escritorio y tablet */
+.mostrar-productos .table-responsive {
+    width: 100%;
+    max-width: 100%;
+}
+
+.mostrar-productos table {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.mostrar-productos th,
+.mostrar-productos td {
+    vertical-align: middle;
+    overflow-wrap: anywhere;
+}
+
+/* Teléfonos */
+@media (max-width: 767px) {
+
+    .mostrar-productos .table-responsive {
+        overflow-x: visible;
+    }
+
+    .mostrar-productos table,
+    .mostrar-productos tbody {
+        display: block;
+        width: 100%;
+    }
+
+    .mostrar-productos thead {
+        display: none;
+    }
+
+    .mostrar-productos tbody tr {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+        background-color: #c0c0c0;
+        border: 1px solid #808080;
+    }
+
+    .mostrar-productos tbody td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        padding: 8px;
+        text-align: right;
+        overflow-wrap: anywhere;
+    }
+
+    /* Etiquetas */
+    .mostrar-productos tbody td:nth-child(1)::before {
+        content: "ID:";
+    }
+
+    .mostrar-productos tbody td:nth-child(2)::before {
+        content: "Producto:";
+    }
+
+    .mostrar-productos tbody td:nth-child(3)::before {
+        content: "Categoría:";
+    }
+
+    .mostrar-productos tbody td:nth-child(4)::before {
+        content: "Precio:";
+    }
+
+    .mostrar-productos tbody td:nth-child(5)::before {
+        content: "Stock:";
+    }
+
+    .mostrar-productos tbody td:nth-child(6)::before {
+        content: "Acciones:";
+    }
+
+    .mostrar-productos tbody td::before {
+        font-weight: bold;
+        text-align: left;
+        flex-shrink: 0;
+    }
+
+    /* Botones de acciones */
+    .mostrar-productos tbody td:last-child {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .mostrar-productos tbody td:last-child button {
+        margin: 2px !important;
+    }
+
+    /* Formulario Bootstrap */
+    .mostrar-productos form {
+        width: 100%;
+    }
+
+    .mostrar-productos .form-control,
+    .mostrar-productos .form-select {
+        width: 100%;
+        min-width: 0;
+    }
+}

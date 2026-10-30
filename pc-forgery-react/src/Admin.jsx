@@ -5,6 +5,7 @@ import Usuarios from "./components/admin/Usuarios.jsx"
 import Reportes from "./components/admin/Reportes.jsx"
 import PerfilAdmin from "./components/admin/PerfilAdmin.jsx"
 import Productos from "./components/admin/Productos.jsx"
+import AccionesAdmin from './components/admin/AccionesAdmin';
 
 function Admin() {
     // Lógica
@@ -79,15 +80,7 @@ return (
                             <h2>Comandos Admin</h2>
                         </div>
 
-                        <div className="contenido-botones">
-                            <button className="btn btn-admin">
-                                Borrar LocalStorage
-                            </button>
-
-                            <button className="btn btn-admin">
-                                Limpiar Historial
-                            </button>
-                        </div>
+                        <AccionesAdmin />
                     </section>
                 )}
 

@@ -1,14 +1,14 @@
 
-
-
-function BotonesWindows() {
+function BotonesWindows({ onColapsar, colapsada }) {
     return (
         <div className="botones-windows">
-            <button>_</button>
-            <button>□</button>
-            <button>×</button>
+            <button onClick={onColapsar} type="button">
+                {colapsada ? "+" : "_"}
+            </button>
+            <button type="button">□</button>
+            <button type="button">×</button>
         </div>
-    )
+    );
 }
 
-export default BotonesWindows
+export default BotonesWindows;

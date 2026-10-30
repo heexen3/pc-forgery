@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from "react"
 import { obtenerProductosCriticos } from "./ProductosCriticos.js"
+import "./ProductosCriticos.css"
 
 function ProductosCriticos() {
     const [productos, setProductos] = useState([])
@@ -10,7 +11,7 @@ function ProductosCriticos() {
     }, [])
 
     return (
-        <section className="contenido">
+        <section className="contenido productos-criticos">
             <div className="admin-titulo">
                 <h2>Productos con Stock Crítico</h2>
             </div>

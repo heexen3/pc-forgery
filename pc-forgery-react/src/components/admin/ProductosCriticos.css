@@ -1,0 +1,92 @@
+
+/* ProductosCriticos.css */
+
+.productos-criticos {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.productos-criticos .table-responsive {
+    width: 100%;
+    max-width: 100%;
+}
+
+.productos-criticos table {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.productos-criticos th,
+.productos-criticos td {
+    vertical-align: middle;
+    overflow-wrap: anywhere;
+}
+
+/* Adaptación para teléfonos */
+@media (max-width: 767px) {
+
+    .productos-criticos .table-responsive {
+        overflow-x: hidden;
+    }
+
+    .productos-criticos table,
+    .productos-criticos tbody {
+        display: block;
+        width: 100%;
+    }
+
+    .productos-criticos thead {
+        display: none;
+    }
+
+    .productos-criticos tbody tr {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+        background-color: #c0c0c0;
+        border: 1px solid #808080;
+    }
+
+    .productos-criticos tbody td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        padding: 8px;
+        text-align: right;
+        overflow-wrap: anywhere;
+    }
+
+    /* Etiquetas de cada columna */
+    .productos-criticos tbody td:nth-child(1)::before {
+        content: "ID:";
+    }
+
+    .productos-criticos tbody td:nth-child(2)::before {
+        content: "Producto:";
+    }
+
+    .productos-criticos tbody td:nth-child(3)::before {
+        content: "Categoría:";
+    }
+
+    .productos-criticos tbody td:nth-child(4)::before {
+        content: "Precio:";
+    }
+
+    .productos-criticos tbody td:nth-child(5)::before {
+        content: "Stock:";
+    }
+
+    .productos-criticos tbody td:nth-child(6)::before {
+        content: "Estado:";
+    }
+
+    .productos-criticos tbody td::before {
+        font-weight: bold;
+        text-align: left;
+        flex-shrink: 0;
+    }
+}
